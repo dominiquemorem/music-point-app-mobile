@@ -1,7 +1,8 @@
 # Music Point App Mobile 🎵
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dcba67fa-7f44-4782-8fb1-8cbc0805f7c2" width="240" height="240" alt="Music Point Logo">
+  <img src="https://github.com/user-attachments/assets/73342f72-dd94-4183-a6f5-f3a8ff4bc5a4" width="240" height="240" alt="Music Point Logo">
 </p>
+
 Music Point is an all-in-one music app that combines global radio streaming, 
 - song identification, Spotify integration, and AI-powered music discovery.
 - Born in Brazil 🇧🇷 and developed by Dominique Morem, it brings the world's
