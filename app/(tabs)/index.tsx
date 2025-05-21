@@ -1,75 +1,109 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { Image, StyleSheet, View } from 'react-native';
+import { Link } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
+    <View style={styles.container}>
+      {/* Cabeçalho roxo */}
+      <View style={styles.header}>
+      </View>
+
+      {/* Conteúdo principal */}
+      <View style={styles.content}>
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/logo-music-point.png')}
+          style={styles.mainImage}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+        {/* <ThemedText style={styles.title}>Music Point</ThemedText> */}
+        <ThemedText style={styles.subtitle}>O melhor da música, num só lugar!</ThemedText>
+
+        <Link href="./radios" style={styles.radioButton}>
+          <ThemedText style={styles.buttonText}>Acessar Rádios</ThemedText>
+        </Link>
+
+        <Link href="/about-us" style={styles.radioButton}>
+          <ThemedText style={styles.buttonText}>Sobre o App</ThemedText>
+        </Link>
+      </View>
+
+      {/* Rodapé roxo */}
+      <View style={styles.footer}>
+        <ThemedText style={styles.footerText}>© 2025 Music Point App</ThemedText>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  header: {
+    backgroundColor: '#fffff',
+    paddingVertical: 20,
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  logo: {
+    width: 180,
+    height: 50,
+    resizeMode: 'contain',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#ccc',
+    marginBottom: 30,
+    textAlign: 'center',
+  },
+  mainImage: {
+    width: 250,
+    height: 250,
+    marginBottom: 0,
+    resizeMode: 'contain',
+  },
+  radioButton: {
+    backgroundColor: '#6a0dad',
+    padding: 15,
+    borderRadius: 8,
+    width: '80%',
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+  secondaryButton: {
+    backgroundColor: 'transparent',
+    padding: 15,
+    borderRadius: 8,
+    width: '80%',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#6a0dad',
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  footer: {
+    backgroundColor: '#fffff',
+    padding: 15,
+    alignItems: 'center',
+  },
+  footerText: {
+    color: '#fff',
+    fontSize: 12,
   },
 });
