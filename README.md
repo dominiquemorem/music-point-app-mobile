@@ -1,6 +1,7 @@
 # Music Point App Mobile 🎵
-
-![radio-garden-logo](https://github.com/user-attachments/assets/dcba67fa-7f44-4782-8fb1-8cbc0805f7c2)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dcba67fa-7f44-4782-8fb1-8cbc0805f7c2" width="240" height="120" alt="Music Point Logo">
+</p>
 
 - Music Point is an all-in-one music app that combines global radio streaming, 
 - song identification, Spotify integration, and AI-powered music discovery.
@@ -33,19 +34,22 @@
 ## 📱 Screenshots
 
 - Home Screen
-![home-app](https://github.com/user-attachments/assets/7a91fa06-df37-4ea2-98a0-bf05cee7fd48)
-
+<br>
+<p align="center"> <img src="https://github.com/user-attachments/assets/7a91fa06-df37-4ea2-98a0-bf05cee7fd48" width="270" height="480" alt="Home Screen"> </p>
+![home-app]()
+<br>
 - Radio Garden Access Screen (WebView)
-![radio-garden](https://github.com/user-attachments/assets/1263adad-e16b-4c2e-b807-f4ae47efd6a1)
-
+<br>
+<p align="center"> <img src="https://github.com/user-attachments/assets/1263adad-e16b-4c2e-b807-f4ae47efd6a1" width="270" height="480" alt="Radio Garden Screen"> </p>
+<br>
 - About Us Screen
-![about-us](https://github.com/user-attachments/assets/0bc778e6-44f7-48d6-b50b-0b2e2c6545cf)
-
-
+<br>
+<p align="center"> <img src="https://github.com/user-attachments/assets/0bc778e6-44f7-48d6-b50b-0b2e2c6545cf" width="270" height="480" alt="About Us Screen"> </p>
+<br>
 ## 🛠 Built With
 Expo - Cross-platform development framework
 React Native - Native app development with React
-Radio Garden - Site who has many radios from all over the world
+Radio Garden - Global radio station access
 
 ## 🤝 Contributing
 We welcome contributions! Please read our CONTRIBUTING.md for guidelines.
